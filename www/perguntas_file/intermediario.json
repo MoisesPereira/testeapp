@@ -1,0 +1,84 @@
+{
+    "perguntas": [
+        {
+            "titulo": "The Romans ____ (to come) to Britain in 54 BC.",
+            "respostas": [
+                "came", "were coming", "comed", "had come"
+            ],
+            "radio": "0",
+            "correta": "a"
+        },
+        {
+            "titulo": "We were strolling in the park when suddenly it _____ (to thunder).",
+            "respostas": [
+                "was thundering", "had thundered", "thundered", "thunders"
+            ],
+            "radio": "1",
+            "correta": "thundered"
+        },
+        {
+            "titulo": "I was watching TV while the kids _____ (to play) in the garden.",
+            "respostas": [
+                "played", "was playing", "were playing", "have played"
+            ],
+            "radio": "2",
+            "correta": "were playing"
+        },
+        {
+            "titulo": "I was writing a letter while my husband _____ (to cook).",
+            "respostas": [
+                "cooked", "was cooking", "cooks", "has cooked"
+            ],
+            "radio": "3",
+            "correta": "was cooking"
+        },
+        {
+            "titulo": "I ____ (to play) the guitar at 9 o'clock yesterday.",
+            "respostas": [
+                "have played", "had played", "played", "was playing"
+            ],
+            "radio": "4",
+            "correta": "was playing"
+        },
+        {
+            "titulo": "Albert Einstein ____ (to publish) a paper on the general theory of relativity in 1916.",
+            "respostas": [
+                "was publishing", "had published", "has published", "published"
+            ],
+            "radio": "5",
+            "correta": "published"
+        },
+        {
+            "titulo": "Carol was eating a banana while Sandy ____ (to do) his home task.",
+            "respostas": [
+                "did", "has done", "had done", "was doing"
+            ],
+            "radio": "6",
+            "correta": "was doing"
+        },
+        {
+            "titulo": "Ernest Hemingway ____ (to win) the Nobel Prize in literature in 1954.",
+            "respostas": [
+                "was winning", "had won", "won", "had been winning"
+            ],
+            "radio": "7",
+            "correta": "won"
+        },
+        {
+            "titulo": "I ____ (to drive) home at 7 p.m. yesterday.",
+            "respostas": [
+                "was driving", "drove", "drive", "driven"
+            ],
+            "radio": "8",
+            "correta": "was driving"
+        },
+        {
+            "titulo": "Bob ____ (to listen) to music when the door bell rang.",
+            "respostas": [
+                "was listened", "listen", "listened", "was listening"
+            ],
+            "radio": "9",
+            "correta": "was listening"
+        }           
+    ]
+}

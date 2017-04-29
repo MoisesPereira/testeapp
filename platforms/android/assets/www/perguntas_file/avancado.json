@@ -1,0 +1,85 @@
+{
+    "perguntas": [
+        {
+            "titulo": "Jake ____ (to roast) meat in the oven while Cara ____ (to knead) dough.",
+            "respostas": [
+                "was roasting / kneaded", "was roasting / was kneading", 
+                "had roasted / kneaded", "had roasted / had been kneading"
+            ],
+            "radio": "0",
+            "correta": "was roasting / was kneading"
+        },
+        {
+            "titulo": "Kate was sleeping when her alarm clock ____ (to go off).",
+            "respostas": [
+                "goes off", "went off", "was going off", "had went off"
+            ],
+            "radio": "1",
+            "correta": "went off"
+        },
+        {
+            "titulo": "The children were making origami when their babysitter ___ (to call) them to dinner.",
+            "respostas": [
+                "was calling", "had called", "called", "had been calling"
+            ],
+            "radio": "2",
+            "correta": "called"
+        },
+        {
+            "titulo": "Benjamin ___ (to watch) a movie before Alison ___ (to come) in.",
+            "respostas": [
+                "was watching / came", "had been watching / was coming", "had been watching / came", "watched / came"
+            ],
+            "radio": "3",
+            "correta": "had been watching / came"
+        },
+        {
+            "titulo": "My brother ____ (to look for) a job for 2 months before they ___ (to employ) him.",
+            "respostas": [
+                "had looked for / employed", "was looking for / had employed", "looked for / employed", "had been looking for / employed"
+            ],
+            "radio": "4",
+            "correta": "had been looking for / employed"
+        },
+        {
+            "titulo": "Oh, how I wish it ___ (not to be) so windy.",
+            "respostas": [
+                "wasn't being", "hadn't been being", "hadn't been", "wasn't"
+            ],
+            "radio": "5",
+            "correta": "wasn't"
+        },
+        {
+            "titulo": "The children ___ (to watch) 'The Hunger Game's when suddenly the light ____ (to go) out.",
+            "respostas": [
+                "watched / had gone", "were watching / went", "had watched / went", "were watching / was going"
+            ],
+            "radio": "6",
+            "correta": "were watching / went"
+        },
+        {
+            "titulo": "Maria ___ (to study) at the Ontario Secondary School from 2008 to 2010.",
+            "respostas": [
+                "was studied", "has studied", "was studying", "studied"
+            ],
+            "radio": "7",
+            "correta": "studied"
+        },
+        {
+            "titulo": "In the cafe we ___ (to try) some delicious food, ___ (to drink) some wine and then we ___ (to walk) a lot in the city centre.",
+            "respostas": [
+                "were trying / were drinking / were walking", "had tried / drank / were walking", "tried / drank / walked", "had tried / had drunk / walked"
+            ],
+            "radio": "8",
+            "correta": "tried / drank / walked"
+        },
+        {
+            "titulo": "Uma ___ (to visit) Moscow when she ___ (to be) young.",
+            "respostas": [
+                "has visited / was", "was visiting / had been", "visited / was", "had visited / had been"
+            ],
+            "radio": "9",
+            "correta": "visited / was"
+        }
+    ]
+}

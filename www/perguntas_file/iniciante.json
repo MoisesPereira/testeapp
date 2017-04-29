@@ -1,0 +1,84 @@
+{
+    "perguntas": [
+        {
+            "titulo": "Have you got _ pen?",
+            "respostas": [
+                "it", "a", "an", "the"
+            ],
+            "radio": "0",
+            "correta": "a"
+        },
+        {
+            "titulo": "Tom ____ (to read) a newspaper now.",
+            "respostas": [
+                "reads", "is reading", "read", "has read"
+            ],
+            "radio": "1",
+            "correta": "is reading"
+        },
+        {
+            "titulo": "The Romans ____ (to come) to Britain in 54 BC.",
+            "respostas": [
+                "came", "were coming", "comed", "had come"
+            ],
+            "radio": "2",
+            "correta": "came"
+        },
+        {
+            "titulo": "Bill ____ (to go) to the club with friends tomorrow. He has got an appointment with them.",
+            "respostas": [
+                "is going", "will have gone", "will go", "goes"
+            ],
+            "radio": "3",
+            "correta": "is going"
+        },
+        {
+            "titulo": "Tom, look! The mail ______ (to deliver).",
+            "respostas": [
+                "is delivered", "delivers", "delivered", "is delivering"
+            ],
+            "radio": "4",
+            "correta": "is delivered"
+        },
+        {
+            "titulo": "My brother is only 6, but he ______ already play the piano.",
+            "respostas": [
+                "has to", "must", "may", "can"
+            ],
+            "radio": "5",
+            "correta": "can"
+        },
+        {
+            "titulo": "At first you have to _____ (to complete a form) the application form.",
+            "respostas": [
+                "try on", "fill in", "come on", "take off"
+            ],
+            "radio": "6",
+            "correta": "fill in"
+        },
+        {
+            "titulo": "Choose two forms of the verb 'to be' according to the order: Past Simple - Past Participle.",
+            "respostas": [
+                "was/were - been", "was - was", "been - been", "been - was"
+            ],
+            "radio": "7",
+            "correta": "was/were - been"
+        },
+        {
+            "titulo": "Your brother is so rude. I don't like ____.",
+            "respostas": [
+                "him", "he", "his", "himself"
+            ],
+            "radio": "8",
+            "correta": "him"
+        },
+        {
+            "titulo": "You should be very careful. Snowboarding is a _____ hobby.",
+            "respostas": [
+                "dangerous", "boring", "awful", "scary"
+            ],
+            "radio": "9",
+            "correta": "dangerous"
+        }                    
+    ]
+}

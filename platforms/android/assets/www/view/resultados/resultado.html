@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="App para estudos de ingles">
+    <meta name="author" content="Moises Pereira">
+
+    <title>Resultado do Quiz</title>
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../../css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link href="../../css/app.css" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+
+    <script src="../../js/bootstrap.min.js"></script>   
+
+	<script>
+
+    var param = location.search.substring(1).split('&'); 
+    var certo = Number(param[0].split('=')[1]);
+    var errado = Number(param[1].split('=')[1]);
+    var level = param[2].split('=')[1];
+
+    var link = "../respostas/respostas_"+level+".html";
+    var linkQuestoes = "../quiz/questoes_"+level+".html";
+
+    window.setTimeout(function(){
+
+    $('#resposta').attr('href', link);
+    $('#repetir').attr('href', linkQuestoes);
+
+    }, 100);
+
+    $(function () {
+        Highcharts.chart('grafico', {
+            colors: [ 'green', 'red' ],
+            chart: {
+            backgroundColor: {
+                    stops: [
+                        [0, 'black']
+                    ]
+                },
+                style: {
+                    fontFamily: '\'Unica One\', sans-serif'
+                },
+                plotBorderColor: 'black',
+                plotBackgroundColor: 'black',
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+
+            title: {
+                text: 'Resultado do Quiz Nível Intermediário',
+                 style: {
+                    color: 'white',
+                    textTransform: 'uppercase',
+                    fontSize: '20px'
+                }
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.0f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Resultado',
+                colorByPoint: true,
+                data: [
+                    {
+                        name: 'Corretas',
+                        y: certo
+                    }, {
+                        name: 'Erradas',
+                        y: errado
+                    }
+                ]
+            }]
+        });
+
+    });
+
+	</script>
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        <br><br>
+
+        <div id="grafico">
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" id="repetir">
+                    <div class="intermediario-questoes">Repetir</div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" id="resposta" >
+                    <div class="iniciante-questoes">Respostas</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br><br><br>
+
+    <div class="row rodape">
+        <hr>
+        <div id="footer" >
+            <ul class="social">
+                <li> <a href="../../index.html"> <i class="fa fa-home fa-3x">  &nbsp; </i> </a> </li>
+                <li> <a href="../quiz/questoes.html"> <i class="fa fa-question-circle-o fa-3x">  &nbsp; </i> </a> </li>
+                <li> <a href="../expressoes/expressoes.html"> <i class="fa fa-comments-o fa-3x">  &nbsp;</i> </a> </li>
+                <li> <a href="../videos/videos.html"> <i class="fa fa-youtube-play fa-3x"> &nbsp; </i> </a> </li>
+            </ul>      
+        </div>  
+    </div>    
+
+
+    <script src="../../js/highcharts.js"></script>
+    <script src="../../js/exporting.js"></script>
+
+	</body>
+</html>

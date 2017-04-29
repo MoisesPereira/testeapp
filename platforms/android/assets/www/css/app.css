@@ -1,0 +1,202 @@
+@font-face{
+    font-family: 'Oswald';
+    src: url('./Oswald-Regular.ttf');
+}
+
+#responsive{
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.space{
+    margin-left: 10px;
+}
+.red{
+    color: #E85B23;
+}
+.green{
+    color: #197D19;
+}
+
+.page-header{
+    font-family: 'Oswald';
+    font-size: 25px;
+    text-align: center;
+}
+.preenchimento{
+    padding: 5%;
+}
+.rodape{
+    position: fixed; 
+    left: 0; 
+    bottom: 10px; 
+    width: 100%; 
+    margin: 0
+}
+.social{
+    list-style: none; 
+    width: 315px; 
+    left: 0; 
+    margin: auto;
+}
+ul li{
+    float: left;
+}
+
+/************* Questoes **********/
+
+.questoes-home{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #19697D;*/
+    font-size: 40px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}
+
+.iniciante-questoes{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #E85B23;*/
+    font-size: 25px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}    
+.intermediario-questoes{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #19697D;*/
+    font-size: 25px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}
+.avancado-questoes{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #B9C065;*/
+    font-size: 25px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}
+.profissional-questoes{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #197D19;*/
+    font-size: 25px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}
+.cor{
+    color: white;
+}
+.tamanho{
+    font-size: 20px;
+}
+.icon{
+    margin-left: 10px;
+}
+.rdbtn{
+    width: 20px;
+    height: 20px;
+    font-family: 'Oswald';
+}
+.rspbtn{
+    font-size: 20px;
+    font-family: 'Oswald';
+}
+
+
+/************* Expressoes **********/
+  
+.expressoes-home{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #B9C065;*/
+    font-size: 40px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+    background-color: #FAFAFA;
+    border-color: #EEEEEE;
+}
+
+.panel-title {
+    font-family: 'Oswald';
+    font-size: 25px;
+}
+
+.panel-title > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+    color: #212121;
+}
+
+.panel-body {
+    font-family: 'Oswald';
+    font-size: 25px;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+    background-color: black;
+}
+
+.demo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/************* Videos **********/
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+.diversos-home{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #E85B23;*/
+    font-size: 25px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}    
+
+.videos-home{
+    text-align: center;
+    font-family: 'Oswald';
+    height: 110px;
+    /*background: #6970C2;*/
+    font-size: 40px;
+    color: white;
+    padding: 30px 10px 10px 10px;
+}

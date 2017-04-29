@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="App para estudos de ingles">
+    <meta name="author" content="Moises Pereira">
+
+    <title>Videos Para Estudar Inglês</title>
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/app.css" rel="stylesheet">
+
+    <script src="../../js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+<!-- Page Content -->
+<div class="container">
+<div class="col-lg-12">
+    <h1 class="page-header cor">Pergunte em Inglês</h1>
+</div>
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading1">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        <i id="clica" class="more-less glyphicon glyphicon-plus"></i>
+                        Como você conseguiu a fluência no idioma?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                <div class="panel-body">
+                      How did you get the fluency in the language?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading2">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você é de onde?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                <div class="panel-body">
+                    Where are you from?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading3">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        O que você faz?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                <div class="panel-body">
+                    What do you do?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading4">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Quantos anos você tem?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                <div class="panel-body">
+                    How old are you?
+                </div>
+            </div>
+        </div>       
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading5">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você tem irmãos?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                <div class="panel-body">
+                    Do you have any brothers or sisters?
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading6">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você tem filhos?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                <div class="panel-body">
+                    Do you have children? / Do you have kids?
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading7">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você tem namorado(a)?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading7">
+                <div class="panel-body">
+                    Do you have a boyfriend/girlfriend?
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading8">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você é casado(a)?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading8">
+                <div class="panel-body">
+                    Are you married?
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading9">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você é comprometido? / Você tem alguém?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading9">
+                <div class="panel-body">
+                    Are you involved (with anyone)?
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading10">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Qual é o seu signo?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading10">
+                <div class="panel-body">
+                    What's your sign?
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading11">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você gosta de...?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading11">
+                <div class="panel-body">
+                    Do you like...? / Do you enjoy...?
+                </div>
+            </div>
+        </div>   
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading12">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Onde você mora?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
+                <div class="panel-body">
+                    Where do you live?
+                </div>
+            </div>
+        </div>   
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading13">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Por acaso você mora em (Porto Alegre)?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
+                <div class="panel-body">
+                    Do you live in (Porto Alegre), by chance?
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading14">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você mora sozinho(a)?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14">
+                <div class="panel-body">
+                    Do you live alone? / Do you live by yourself?
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading15">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Com quem você mora?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
+                <div class="panel-body">
+                    Who do you live with?
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading16">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Posso perguntar (quantos anos você tem)?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
+                <div class="panel-body">
+                    Can I ask (how old you are)?
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading17">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Não precisa responder se você não quiser...
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
+                <div class="panel-body">
+                    You don't have to answer if you don't want to...
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading18">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você se ofenderia se eu perguntasse...
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading18">
+                <div class="panel-body">
+                    If you don't mind my asking, ...
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading19">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Não quero ser incoveniente
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading19">
+                <div class="panel-body">
+                     Sorry if I seem too personal
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading20">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Não quero ser intrometido(a)
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading20">
+                <div class="panel-body">
+                     I don't mean to be nosy
+                </div>
+            </div>
+        </div> 
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading21">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Só por curiosidade...
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading21">
+                <div class="panel-body">
+                     Just out of curiosity...
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading22">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Eu gosto / Eu não gosto (disso)
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading22">
+                <div class="panel-body">
+                     I like / I don't like (this)
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading23">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você gosta (disto)?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading23">
+                <div class="panel-body">
+                     Do you like (this)?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading24">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        O que você faz? Qual é o seu trabalho?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading24">
+                <div class="panel-body">
+                     What do you do? What's your job?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading25">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você tem algum bicho de estimação?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading25">
+                <div class="panel-body">
+                     Do you have any pets?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading26">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Qual foi o último livro que você leu?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading26">
+                <div class="panel-body">
+                     What was the last book you read?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading27">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você gosta de cozinhar?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading27">
+                <div class="panel-body">
+                     Do you like to cook?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading28">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Qual é sua comida favorita?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse28" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading28">
+                <div class="panel-body">
+                     What's your favorite food?
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading29">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Você mora em casa ou apartamento?
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse29" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading29">
+                <div class="panel-body">
+                     Do you live in a house or an apartment?
+                </div>
+            </div>
+        </div>
+
+    </div><!-- panel-group -->
+        
+</div>
+<br><br><br><br>
+<!-- /.container -->
+
+<div class="row rodape">
+    <hr>
+    <div id="footer" >
+        <ul class="social">
+            <li> <a href="../../index.html"> <i class="fa fa-home fa-3x">  &nbsp; </i> </a> </li>
+            <li> <a href="../quiz/questoes.html"> <i class="fa fa-question-circle-o fa-3x">  &nbsp; </i> </a> </li>
+            <li> <a href="#"> <i class="fa fa-comments-o fa-3x">  &nbsp;</i> </a> </li>
+            <li> <a href="../videos/videos.html"> <i class="fa fa-youtube-play fa-3x"> &nbsp; </i> </a> </li>
+        </ul>         
+    </div>  
+</div>
+
+</body>
+
+<script>
+
+    $(".panel").click(function(e){
+        $('.collapse').on('shown.bs.collapse', function(){
+            $(this).parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+        }).on('hidden.bs.collapse', function(){
+            $(this).parent().find(".glyphicon-minus").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+        });
+    });
+
+</script>
+
+</html>

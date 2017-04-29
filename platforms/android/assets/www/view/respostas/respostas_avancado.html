@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="App para estudos de ingles">
+    <meta name="author" content="Moises Pereira">
+
+    <title>Respostas Avançado - Correta x Errada</title>
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    
+   
+    <!-- Custom CSS -->
+    <link href="../../css/app.css" rel="stylesheet">
+
+    <link href="../../css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../util/functions.js"></script>
+
+    <script>
+
+    var store = localStorage.getItem("avancado");
+    var parse = JSON.parse(store);
+
+    console.log('Store Parse: ', parse);
+
+    var questoes;
+    var posicao = 0;
+    var certo = 0;
+    var errado = 0;
+    var respSelecionada = [];
+    var valorSelecionado = 'kkkk';
+    var certoErrado = [];
+
+    function localizar(posicao){
+
+        console.log('Passou aki...');
+
+        for( var i = 0; i < 4; i++ ) {
+            
+            var classeIcon = ".icon" + i;
+            var classeResp = ".resp" + i;
+            var selecionado = parse[posicao].selecionado;
+            var certo = parse[posicao].certo;
+            var valor = $(classeResp)[0].innerText;
+
+            if( certo != selecionado ) {
+
+                if( selecionado == valor ) {
+                    $(classeIcon).addClass("space fa fa-times red");
+                }
+            }
+
+            if( valor == certo ) {
+                $(classeIcon).addClass("space fa fa-check green");
+            }
+        }
+        posicao++;
+    }
+
+    window.onload = function(){
+
+        limpar();
+
+        console.log('entrou no init...........');
+
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", '../../perguntas_file/avancado.json', false);
+        rawFile.onreadystatechange = function ()
+        {
+            var obJson = rawFile.responseText;
+            var getJson = JSON.parse(obJson);
+            var stringifyJson = JSON.stringify(getJson);
+            var parseJson = JSON.parse(stringifyJson);
+            
+            questoes = parseJson.perguntas;
+
+            $('.titulo').html(questoes[posicao].titulo);
+            $('.resp0').html(' ' + questoes[posicao].respostas[0]);
+            $('.resp1').html(' ' + questoes[posicao].respostas[1]);
+            $('.resp2').html(' ' + questoes[posicao].respostas[2]);
+            $('.resp3').html(' ' + questoes[posicao].respostas[3]); 
+
+        }
+        rawFile.send(null);
+        localizar(posicao);
+
+    }
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header cor"> Respostas nível Avançado. </h4>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row well">
+        <span>
+            <i class="fa fa-chevron-left fa-3x pull-left" onclick="voltar();" aria-hidden="true"></i>
+        </span>
+        <span>
+            <i class="fa fa-chevron-right fa-3x pull-right" onclick="proximo();" aria-hidden="true"></i>   
+        </span>
+       
+       <br><br>
+        <h3 class="text-center tamanho">
+                <span class="titulo"> Have you got _ pen? </span>
+        </h3> 
+
+
+        <br>
+        <form>
+            <span class="resp0 rspbtn"> it </span><span class="icon0"></span><br>
+            <span class="resp1 rspbtn"> a </span><span class="icon1"></span><br>
+            <span class="resp2 rspbtn"> an </span><span class="icon2"></span><br>
+            <span class="resp3 rspbtn"> the </span><span class="icon3"></span><br>
+        </form>
+
+        </div>
+
+        <div class="row">
+        </div>
+ 
+    </div>
+    <!-- /.container -->
+
+    <div class="row rodape">
+        <hr>
+        <div id="footer" >
+            <ul class="social">
+                <li> <a href="../../index.html"> <i class="fa fa-home fa-3x">  &nbsp; </i> </a> </li>
+                <li> <a href="../quiz/questoes.html"> <i class="fa fa-question-circle-o fa-3x">  &nbsp; </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-comments-o fa-3x">  &nbsp;</i> </a> </li>
+                <li> <a href="../videos/videos.html"> <i class="fa fa-youtube-play fa-3x"> &nbsp; </i> </a> </li>
+            </ul>         
+        </div>  
+    </div>
+
+</body>
+
+</html>

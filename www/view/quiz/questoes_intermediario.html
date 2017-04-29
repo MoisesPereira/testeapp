@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="App para estudos de ingles">
+    <meta name="author" content="Moises Pereira">
+
+    <title>QUIZ - Intermediário</title>
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/app.css" rel="stylesheet">
+   
+    <!-- Custom CSS -->
+    <link href="../../css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <script>
+
+    var questoes;
+    var posicao = 0;
+    var certo = 0;
+    var errado = 0;
+    var respSelecionada = [];
+    var valorSelecionado = '';
+    var certoErrado = [];
+
+    $(document).ready(function(){
+
+        $('.r0').click( function(event) {
+            $("#resp0").prop('checked', true);
+        });
+        $('.r1').click(function(event){
+            $("#resp1").prop('checked', true);
+        });
+        $('.r2').click(function(event){
+            $("#resp2").prop('checked', true);
+        });
+        $('.r3').click(function(event){
+            $("#resp3").prop('checked', true);
+        });
+
+    });    
+
+    function proximo(){
+
+        valorSelecionado = $("input:radio[name="+posicao+"]:checked").val();
+        posicao++;
+        
+        validar(posicao);
+        var valid = validaVazio();
+
+        if( valid === 4 ){
+            return;
+        };
+
+        $('.inputRadio').attr('name', posicao);  
+        
+        if(posicao >= 10){
+            posicao = 10;
+            window.location="../resultados/resultado.html?certo="+certo+"&errado="+errado+"&level=intermediario";
+            return;
+        }
+            
+        $('.titulo').html(questoes[posicao].titulo);
+        $('.resp0').html(' ' + questoes[posicao].respostas[0]);
+        $("input:radio[name="+ posicao +"]")[0].value = questoes[posicao].respostas[0];
+        
+        $('.resp1').html(' ' + questoes[posicao].respostas[1]);
+        $("input:radio[name="+ posicao +"]")[1].value = questoes[posicao].respostas[1];
+
+        $('.resp2').html(' ' + questoes[posicao].respostas[2]);
+        $("input:radio[name="+ posicao +"]")[2].value = questoes[posicao].respostas[2];
+
+        $('.resp3').html(' ' + questoes[posicao].respostas[3]); 
+        $("input:radio[name="+ posicao +"]")[3].value = questoes[posicao].respostas[3]; 
+
+        $( "input[type=radio]:checked" ).prop( "checked", false );
+
+    }
+
+    function voltar(back){
+        posicao--;        
+        validar(posicao);
+        var valid = validaVazio();
+
+        if( valid === 4 ){
+            return;
+        };
+                    
+        $('.inputRadio').attr('name', posicao);  
+
+        if(posicao < 0){
+            posicao = 0;
+            return;
+        }
+            
+        $('.titulo').html(questoes[posicao].titulo);
+        $('.resp0').html(' ' + questoes[posicao].respostas[0]);
+        $("input:radio[name="+posicao+"]")[0].value = questoes[posicao].respostas[0];
+        
+        $('.resp1').html(' ' + questoes[posicao].respostas[1]);
+        $("input:radio[name="+posicao+"]")[1].value = questoes[posicao].respostas[1];
+
+        $('.resp2').html(' ' + questoes[posicao].respostas[2]);
+        $("input:radio[name="+posicao+"]")[2].value = questoes[posicao].respostas[2];
+
+        $('.resp3').html(' ' + questoes[posicao].respostas[3]); 
+        $("input:radio[name="+posicao+"]")[3].value = questoes[posicao].respostas[3]; 
+
+    }
+
+    function validaVazio(posicao){
+
+        if( $('input[type="radio"]').not(':checked').length == 4 ){
+            alert('Selecione uma opção!');
+            return 4;
+        }
+    }
+
+    function validar(posicao){
+        var valid = validaVazio();
+
+        if( valid === 4 ){
+            return;
+        };
+
+        var posic = posicao - 1;
+        var correto = questoes[posic].correta;  
+
+        var obj = {
+            nivel: 'iniciante',
+            questao: posic,
+            certo: correto,
+            selecionado: valorSelecionado
+        };
+
+        certoErrado.push(obj);
+
+        localStorage.setItem("intermediario", JSON.stringify(certoErrado));
+
+        console.log('Objeto com as informações: ', obj);
+  
+        if(valorSelecionado === correto){
+            certo ++;
+        }else{
+            errado ++;
+        }        
+    }
+
+    window.onload = function(){
+
+        // console.log('entrou no init...........');
+
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", '../../perguntas_file/intermediario.json', false);
+        rawFile.onreadystatechange = function ()
+        {
+            var obJson = rawFile.responseText;
+            var getJson = JSON.parse(obJson);
+            var stringifyJson = JSON.stringify(getJson);
+            var parseJson = JSON.parse(stringifyJson);
+
+            questoes = parseJson.perguntas;
+
+            $('.titulo').html(questoes[posicao].titulo);
+
+            $('.resp0').html(' ' + questoes[posicao].respostas[0]);
+            $("input:radio[name="+posicao+"]")[0].value = questoes[posicao].respostas[0];
+
+            $('.resp1').html(' ' + questoes[posicao].respostas[1]);
+            $("input:radio[name="+posicao+"]")[1].value = questoes[posicao].respostas[1];
+
+            $('.resp2').html(' ' + questoes[posicao].respostas[2]);
+            $("input:radio[name="+posicao+"]")[2].value = questoes[posicao].respostas[2];
+
+            $('.resp3').html(' ' + questoes[posicao].respostas[3]); 
+            $("input:radio[name="+posicao+"]")[3].value = questoes[posicao].respostas[3]; 
+
+            $('.inputRadio').attr('name', posicao);   
+
+        }
+        rawFile.send(null);
+
+    }
+
+    </script>
+
+</head>
+
+<body style="background: black;">
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header cor"><center> Perguntas nível Intermediário. </center></h4>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row well">
+        <span>
+            <i class="fa fa-chevron-left fa-3x pull-left" onclick="voltar();" aria-hidden="true"></i>
+        </span>
+        <span>
+            <i class="fa fa-chevron-right fa-3x pull-right" onclick="proximo();" aria-hidden="true"></i>   
+        </span>
+       
+            <br><br>
+            <h3 class="text-center tamanho">
+                   <span class="titulo"> Have you got _ pen? </span>
+            </h3> 
+   
+            <br>
+            <form>
+                <div class="r0">
+                    <input type="radio" id="resp0" class="inputRadio rdbtn" name="0" value="xxxx">
+                    <span class="resp0 rspbtn"> it </span>
+                    <span class="icon 0"></span>
+                    <br>
+                </div>
+                <div class="r1">
+                    <input type="radio" id="resp1" class="inputRadio rdbtn" name="0" value="ccccc">
+                    <span class="resp1 rspbtn"> a </span>
+                    <span class="icon 1"></span>
+                    <br>
+                </div>
+                <div class="r2">
+                    <input type="radio" id="resp2" class="inputRadio rdbtn" name="0" value="zzzzzz">
+                    <span class="resp2 rspbtn"> an </span>
+                    <span class="icon 2"></span>
+                    <br>
+                </div>
+                <div class="r3">
+                    <input type="radio" id="resp3" class="inputRadio rdbtn" name="0" value="aaaaa">
+                    <span class="resp3 rspbtn"> the </span>
+                    <span class="icon 3"></span>
+                    <br>
+                </div>
+            </form>
+
+        </div>
+    <!-- /.container -->
+
+    <div class="row rodape">
+        <hr>
+        <div id="footer" >
+            <ul class="social">
+                <li> <a href="../../index.html"> <i class="fa fa-home fa-3x">  &nbsp; </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-question-circle-o fa-3x">  &nbsp; </i> </a> </li>
+                <li> <a href="../expressoes/expressoes.html"> <i class="fa fa-comments-o fa-3x">  &nbsp;</i> </a> </li>
+                <li> <a href="../videos/videos.html"> <i class="fa fa-youtube-play fa-3x"> &nbsp; </i> </a> </li>
+            </ul>      
+        </div>  
+    </div>  
+
+</body>
+
+</html>
